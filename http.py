@@ -28,6 +28,6 @@ def dataset(num_rows):
 
 
 if __name__=='__main__':
-	app.run(debug=False, host='46.101.119.126',port=1000)
+	app.run(debug=False, host='localhost',port=1000)
 
 
