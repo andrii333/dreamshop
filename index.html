@@ -1,0 +1,71 @@
+<html ng-app='app'>
+
+
+<head>
+
+
+	<script src="./static/lib/angular.min.js"></script>
+	<script src="./static/lib/jquery.min.js"></script>
+	<script src="./static/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="./static/lib/angular-ui-router.js"></script>
+	<script src="./static/lib/ui-bootstrap-tpls-1.1.0.min.js"></script>
+	<script src="./static/lib/chance.min.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="./static/lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./static/lib/awesome/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="./static/lib/animate.css">
+
+	<!--For Concatenates -->
+
+	<script src="./static/custom/js/store.js"></script>
+	<script src="./static/custom/js/basket.js"></script>
+	<script src="./static/custom/js/main_controller.js"></script>
+	
+
+	<script src="./static/custom/js/directives.js"></script>
+	<script src="./static/custom/js/backend.js"></script>
+	<script src="./static/custom/js/config.js"></script>
+	<script src="./static/custom/js/data_table.js"></script>
+	<script src="./static/custom/js/ng-anim.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="./static/custom/css/compile.css">
+
+
+</head>
+
+
+<body ng-app="app">
+
+	<div class="main_container" ng-controller="MainController">
+
+		<div class="main_plaha">
+			<div class="container row">
+				<div class="col-sm-4 title">
+					<span class="shop">DreamShop</span>
+				</div>
+
+				<div class="col-sm-4 credits">
+					<span ng-show="user.credits!=undefined">Credits: {{user.credits}}$</span>
+				</div>
+
+
+				<div class="col-sm-4 basket">
+					<div><span><a ui-sref="basket">Basket </a></span><span> {{calc_basket()}}$</span></div>
+				</div>
+
+
+
+			</div>
+		</div>
+
+
+		<div ui-view></div>
+	</div>
+
+</body>
+
+
+
+
+</html>

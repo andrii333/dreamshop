@@ -1,0 +1,98 @@
+.basket_container
+	{
+
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+
+	.page-header i
+		{
+		margin-left:25px;
+		color:rgb(167, 166, 166) !important;
+		border-left:1px solid rgb(167, 166, 166);
+		padding:5px;
+		cursor:pointer;
+		}
+
+	.page-header i:hover
+		{
+		color:black !important;
+		border-left:1px solid black;
+		}
+
+	.table_container
+		{
+		width:100%;
+
+
+		.paging
+			{
+			float:left;
+			}
+
+		.num_items
+			{
+			clear:both;
+			float:left;
+			}
+		.togle_container
+			{
+			clear:both;
+			float:left;
+			}
+		.stat
+			{
+			margin-top:10px;
+			clear:both;
+			float:left;
+			}
+
+		table td:nth-of-type(1)
+			{
+			width:22%;
+			}
+		table td:nth-of-type(2)
+			{
+			width:22%;
+			}
+		table td:nth-of-type(3)
+			{
+			width:22%;
+			}
+		table td:nth-of-type(4)
+			{
+			width:22%;
+			}
+		table td:nth-of-type(5)
+			{
+			width:12%;
+			}
+		.buttons
+			{
+			background:#F7F7F7;
+			span
+				{
+				cursor:pointer;
+				}
+			span:nth-of-type(1)
+				{
+				color:green;
+				}
+			span:nth-of-type(2)
+				{
+				color:rgb(185, 0, 0);
+				}
+			span:nth-of-type(3)
+				{
+				color:rgb(190, 189, 189);
+				}
+
+
+			}
+
+
+
+		}
+
+
+	}

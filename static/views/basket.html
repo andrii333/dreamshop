@@ -1,0 +1,115 @@
+<div class="basket_container">
+	<div class="page-header">
+		<h1>Basket<i ui-sref="store" class="fa fa-reply"></i></h1>
+	</div>
+
+
+
+
+	<div class="table_container" table-data table-config="config" src-body="basket_arr">
+
+
+		<script type="text/ng-template" id="table.html">
+
+		
+		<div class="empty_basket" ng-show="tsource.length==0" style="color:#DADADA;font-size:30px;text-align:center">
+			Empty Basket
+		</div>
+		
+		
+		<!-- insert paggind -->
+		<div class="paging" paging></div>   
+
+		<!-- insert items per page -->
+		<div class="num_items">
+			<num-items ></num-items>
+		</div>
+	
+
+		<!-- insert stat -->			
+
+		
+
+		<div class="togle_container" ng-show="tsource.length!=0">
+			<a role="button" data-target=".collapse" data-toggle="collapse">Filters</a>  
+		</div>
+
+		<stat class="stat"></stat>
+	
+		<table class="table table-bordered" ng-show="tsource.length!=0">
+			<thead>
+				<tr>
+					<th ng-repeat="item in tconf.head track by $index" ng-class="{'gray': sort_dict[$index]!=false}">
+						{{item.name}}
+						<sortable set-sort='{"num_col":"{{$index}}","type":"{{item.sort}}"}'></sortable>
+					</th>
+					
+
+
+				</tr>
+				
+
+
+			</thead>
+
+
+
+			<tbody>
+				<!-- FOR FILTERS -->
+				<tr class='tr_collapse'>
+					<td ng-repeat="item in tconf.head track by $index">
+						<filterable class="collapse" data set-opt='{"num_col":{{$index}}}'></filterable>
+					</td>
+					
+				</tr>
+
+				<tr ng-repeat="item in page track by $index"
+					>
+					<td  
+						ng-repeat="val in item track by $index"
+						ng-if="$index!=4"
+						>
+						{{val}}</td>
+					<td class="buttons break_selections">
+						<span 
+							class="glyphicon glyphicon-plus-sign"
+							ng-click="add_item([0,0,0,item[4]])"
+							add
+							></span>
+						<span 
+							class="glyphicon glyphicon-minus-sign break_selections"
+							ng-click="remove_item(item[4])"
+							add
+							></span>
+						<span 
+							class="glyphicon glyphicon-remove break_selections"
+							ng-click="remove_entire(item[4])"
+							add
+							></span>
+
+
+					</td>
+				</tr>
+			</tbody>
+
+		</table>
+
+
+
+		</script>
+
+
+
+	</div>  <!--close block for TABLE -->
+
+
+
+
+
+
+
+
+
+
+
+</div>
